@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validate form input with Javascript</title>
+
+	<script>
+		function validateForm() {
+		    var a = document.forms["sampleForm"]["firstname"].value;
+		    var b = document.forms["sampleForm"]["lastname"].value;
+		    var c = document.forms["sampleForm"]["middlename"].value;
+		    if (a == "" || b == "" || c == "") {
+		        alert("Please fill out all fields");
+		        return false;
+		    }
+		}
+	</script>
+</head>
+<body>
+		
+	<form method="POST" name="sampleForm" action="" onSubmit="return validateForm()">
+		  <input type="text" name="firstname" placeholder="firstname">
+		  <input type="text" name="lastname" placeholder="lastname">
+		  <input type="text" name="middlename" placeholder="middlename">
+		  <input type="submit" name="submit" value="submit">
+	</form>
+
+</body>
+</html>
